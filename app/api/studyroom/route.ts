@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+// 정적 내보내기를 위한 설정
+export const dynamic = 'force-static';
+
 // Node.js 버전 로깅
 console.log('Node.js version:', process.version);
 
@@ -291,25 +294,12 @@ const grammarData: GrammarItem[] = [
   }
 ];
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
-    const { searchParams } = new URL(request.url);
-    const searchQuery = searchParams.get('search') || '';
+    // 정적 내보내기에서는 검색 기능이 필요 없으므로 모든 데이터를 반환합니다.
+    console.log(`Found ${grammarData.length} items (static export)`);
     
-    let filteredData = grammarData;
-    
-    if (searchQuery) {
-      filteredData = grammarData.filter(item => 
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.concept.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.level.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
-    
-    console.log(`Found ${filteredData.length} items matching search query: "${searchQuery}"`);
-    
-    return NextResponse.json({ items: filteredData });
+    return NextResponse.json({ items: grammarData });
   } catch (error) {
     console.error('Error processing request:', error);
     

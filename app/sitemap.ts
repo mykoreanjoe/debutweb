@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
 
+// 정적 내보내기를 위한 설정
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://debutweb.vercel.app'
   

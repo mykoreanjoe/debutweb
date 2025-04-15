@@ -47,7 +47,7 @@ export default function About() {
                 </p>
                 <p className="mb-4">
                   영어 실력 향상을 넘어, 자기주도적 학습 능력과 성취의 기쁨을 경험할 수 있는 
-                  데뷰의 여정에 여러분을 초대합니다. 함께 완성해 나가는 영어 학습, Let's Do It!
+                  데뷰의 여정에 여러분을 초대합니다. 함께 완성해 나가는 영어 학습, Let&apos;s Do It!
                 </p>
                 <div className="mt-6">
                   <Link 
@@ -69,7 +69,7 @@ export default function About() {
           <h2 className="text-3xl font-bold text-center mb-12">데뷰의 교육 철학 - 같이 완성</h2>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-lg text-gray-700 leading-relaxed">
-              데뷰의 교육은 <span className="text-primary font-semibold">"같이 완성"</span>이라는 철학에 기반합니다. 
+              데뷰의 교육은 <span className="text-primary font-semibold">&quot;같이 완성&quot;</span>이라는 철학에 기반합니다. 
               학생 혼자만의 노력이 아닌, 학생·학부모·선생님이 함께 협력하여 영어 실력을 완성해 나가는 
               과정을 중요시합니다. 각자의 역할과 책임을 다할 때 최상의 교육적 성과가 이루어진다고 믿습니다.
             </p>

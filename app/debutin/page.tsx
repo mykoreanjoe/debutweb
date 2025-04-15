@@ -190,11 +190,14 @@ export default function Debutin() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-12">데뷰인이란? 🤔</h2>
-            <p className="text-xl mb-12 leading-relaxed">
-              <span className="font-semibold text-blue-200">데뷰인(Debut人)</span>은 DEBUT 영어학원에서 
-              자신만의 학습 루틴을 형성하고, 도전을 통해 성장하여 자신의 영어 능력을 한 단계 
-              끌어올린 학생들을 의미합니다. 👨‍🎓👩‍🎓
-            </p>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                데뷰의 교육은 <span className="text-primary font-semibold">&quot;같이 완성&quot;</span>이라는 철학에 기반합니다.
+                학생 혼자만의 노력이 아닌, 학생·학부모·선생님이 함께 협력하여 영어 실력을 완성해 나가는
+                과정을 중요시합니다. 이 과정에서 <span className="text-primary font-semibold">&apos;데뷰인&apos;</span>은 학생들의 
+                성공적인 영어 학습 경험을 위한 핵심 요소입니다.
+              </p>
+            </div>
             <div className="bg-blue-900 bg-opacity-50 p-10 rounded-lg shadow-xl border border-blue-500">
               <p className="text-2xl italic">
                 "영어 학습은 단순한 지식 습득이 아닌, 자신을 표현하고 세상과 소통하는 <br/>

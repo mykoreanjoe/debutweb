@@ -48,16 +48,61 @@ export default function StudyRoomPage() {
         
         // 캐시 방지를 위한 타임스탬프 추가
         const timestamp = new Date().getTime();
-        const response = await fetch(`/api/studyroom?search=${searchQuery}&t=${timestamp}`);
         
-        if (!response.ok) {
-          const errorData = await response.json();
-          console.error('API 오류 응답:', errorData);
-          throw new Error(`API 응답 오류: ${errorData.error || response.statusText} (상태 코드: ${response.status})`);
+        try {
+          const response = await fetch(`/api/studyroom?search=${searchQuery}&t=${timestamp}`);
+          
+          if (!response.ok) {
+            throw new Error(`API 응답 오류: (상태 코드: ${response.status})`);
+          }
+          
+          const data = await response.json();
+          setStudyData(data);
+        } catch (error) {
+          console.error('API 호출 실패, 정적 데이터 사용:', error);
+          // 정적 데이터 예시를 사용하여 폴백
+          setStudyData({
+            items: [
+              {
+                id: 1,
+                level: "초급",
+                concept: "기본 문장 구조",
+                title: "영어 문장의 기본 구조 이해하기",
+                videoId: "xki1IBFLPAw",
+                duration: "15분",
+                tags: ['문장구조', '기본문법', '주어동사']
+              },
+              {
+                id: 2,
+                level: "초급",
+                concept: "시제",
+                title: "현재시제 완벽 정복",
+                videoId: "tNEG0Wbc5eQ",
+                duration: "20분",
+                tags: ['시제', '현재시제', '기본문법']
+              },
+              {
+                id: 11,
+                level: "중급",
+                concept: "분사구문",
+                title: "분사구문 완벽 정리",
+                videoId: "168dKlRc7Hg",
+                duration: "24분",
+                tags: ['분사구문', '현재분사', '과거분사']
+              },
+              {
+                id: 21,
+                level: "고급",
+                concept: "도치",
+                title: "도치 완벽 정리",
+                videoId: "ehQ3uoS7YqE",
+                duration: "28분",
+                tags: ['도치', '강조', '고급문법']
+              }
+            ]
+          });
         }
         
-        const data = await response.json();
-        setStudyData(data);
         setIsLoading(false);
       } catch (error) {
         console.error('데이터 로딩 중 오류 발생:', error);
@@ -134,20 +179,23 @@ export default function StudyRoomPage() {
   };
 
   // 검색 결과 카드 컴포넌트
-  const SearchResultCard = ({ item }: { item: GrammarItem }) => (
+  const SearchResultCard = ({ item, index }: { item: GrammarItem; index: number }) => (
     <div
       onClick={() => handleVideoSelect(item)}
       className="bg-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md cursor-pointer transition-shadow"
     >
-      <div className="relative pb-[56.25%] mb-3 rounded-lg overflow-hidden">
+      <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-md">
         <Image
           src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
           alt={item.title}
-          className="w-full h-auto rounded-lg shadow-md"
-          loading="lazy"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={index < 3}
           onError={(e) => {
-            e.currentTarget.onerror = null;
-            e.currentTarget.src = `https://img.youtube.com/vi/${item.videoId}/mqdefault.jpg`;
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = `https://img.youtube.com/vi/${item.videoId}/mqdefault.jpg`;
           }}
         />
       </div>
@@ -162,9 +210,9 @@ export default function StudyRoomPage() {
         <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded mr-2">
           {item.level}
         </span>
-        {item.tags.map((tag, index) => (
+        {item.tags.map((tag) => (
           <span
-            key={index}
+            key={tag}
             className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2"
           >
             {tag}
@@ -185,8 +233,8 @@ export default function StudyRoomPage() {
             {searchResults.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {searchResults.map((item, index) => (
-                  <Suspense key={index} fallback={<LoadingComponent />}>
-                    <SearchResultCard item={item} />
+                  <Suspense key={item.id} fallback={<LoadingComponent />}>
+                    <SearchResultCard item={item} index={index} />
                   </Suspense>
                 ))}
               </div>
@@ -272,9 +320,9 @@ export default function StudyRoomPage() {
             <div className="mt-2">
               <p className="text-sm text-gray-500 mb-2">연관 검색어:</p>
               <div className="flex flex-wrap gap-2">
-                {getRelatedTags().map((tag, index) => (
+                {getRelatedTags().map((tag) => (
                   <button
-                    key={index}
+                    key={tag}
                     onClick={() => setSearchQuery(tag)}
                     className="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
                   >
@@ -300,8 +348,8 @@ export default function StudyRoomPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {studyData.items
                     .filter(item => item.level === level)
-                    .map((item) => (
-                      <SearchResultCard key={item.id} item={item} />
+                    .map((item, index) => (
+                      <SearchResultCard key={item.id} item={item} index={index} />
                     ))}
                 </div>
               </div>
