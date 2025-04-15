@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiArrowLeft, FiBookOpen, FiAward, FiMessageCircle, FiBriefcase, FiStar, FiBook } from 'react-icons/fi';
+import { FiArrowLeft, FiAward, FiMessageCircle, FiBriefcase, FiStar, FiBook } from 'react-icons/fi';
 
 export const metadata = {
   title: '최요셉 원장님 - DEBUT 영어학원',

@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { FiArrowRight, FiBarChart2, FiAward, FiCheckCircle, FiActivity, FiBook, FiLayers, FiVideo } from 'react-icons/fi';
+import { FiBook, FiLayers, FiVideo } from 'react-icons/fi';
 
 export const metadata = {
   title: 'DEBUT 온라인 AI 학습 - 인공지능 기반 맞춤형 영어 학습',

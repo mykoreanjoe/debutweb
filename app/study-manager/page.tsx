@@ -33,7 +33,7 @@ export default function StudyManager() {
             <h2 className="text-3xl font-bold text-center mb-6">3중 관리 시스템</h2>
             <p className="text-lg text-center text-gray-600 mb-12">
               학생의 지속적인 성장을 위한 데뷰만의 특별한 학습 관리 시스템입니다.<br/>
-              학부모와의 적극적인 협력을 통해 "같이 완성"하는 교육을 실현합니다.
+              학부모와의 적극적인 협력을 통해 &quot;같이 완성&quot;하는 교육을 실현합니다.
             </p>
             
             <div className="relative">

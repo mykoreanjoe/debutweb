@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiArrowRight, FiArrowLeft, FiExternalLink, FiBookmark, FiTarget, FiActivity, FiUsers, FiLayers, FiStar, FiCheckCircle, FiList } from 'react-icons/fi';
+import { FiArrowRight, FiArrowLeft, FiExternalLink, FiBookmark, FiTarget, FiActivity, FiLayers, FiStar, FiCheckCircle } from 'react-icons/fi';
 
 export const metadata = {
   title: 'DEBUT 학습과정 - 5단계 영어 학습 방법론',

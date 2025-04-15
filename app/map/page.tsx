@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiMapPin, FiPhone, FiClock, FiMail, FiExternalLink } from 'react-icons/fi';
+import { FiMapPin, FiPhone, FiClock, FiExternalLink } from 'react-icons/fi';
 
 export const metadata = {
   title: '목동데뷰 영어학원 - 찾아오시는 길',
