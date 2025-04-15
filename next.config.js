@@ -27,17 +27,6 @@ const nextConfig = {
       },
     ],
   },
-  // OpenSSL 문제를 해결하기 위한 웹팩 설정
-  webpack: (config, { isServer, dev }) => {
-    // OpenSSL 이슈를 해결하기 위한 fallback 추가
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      crypto: require.resolve('crypto-browserify'),
-      stream: require.resolve('stream-browserify'),
-    };
-
-    return config;
-  },
   output: 'export',
 };
 
