@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server';
 // 정적 내보내기를 위한 설정
 export const dynamic = 'force-static';
 
-// Node.js 버전 로깅
-console.log('Node.js version:', process.version);
+// Node.js 버전 로깅 제거
+// console.log('Node.js version:', process.version);
 
 interface GrammarItem {
   id: number;
@@ -297,7 +297,8 @@ const grammarData: GrammarItem[] = [
 export async function GET() {
   try {
     // 정적 내보내기에서는 검색 기능이 필요 없으므로 모든 데이터를 반환합니다.
-    console.log(`Found ${grammarData.length} items (static export)`);
+    // 로깅 제거
+    // console.log(`Found ${grammarData.length} items (static export)`);
     
     return NextResponse.json({ items: grammarData });
   } catch (error) {
