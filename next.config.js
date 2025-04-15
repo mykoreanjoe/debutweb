@@ -5,7 +5,7 @@ const nextConfig = {
     // ESLint 에러로 인한 빌드 실패를 방지합니다
     ignoreDuringBuilds: true,
   },
-  distDir: 'build',
+  output: 'standalone',
   images: {
     // 이미지 최적화 설정
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
