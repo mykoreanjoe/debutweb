@@ -302,13 +302,12 @@ export async function GET() {
     
     return NextResponse.json({ items: grammarData });
   } catch (error) {
-    console.error('Error processing request:', error);
+    // console.error 제거
+    // console.error('Error processing request:', error);
     
-    // 향상된 오류 정보 추출
     const errorInfo = {
       message: error instanceof Error ? error.message : 'Unknown error',
       name: error instanceof Error ? error.name : 'Error',
-      stack: error instanceof Error ? error.stack : undefined,
     };
     
     return NextResponse.json(
