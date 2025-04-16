@@ -14,44 +14,28 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* 히어로 섹션 */}
-      <section className="bg-white py-24 md:py-32">
+      {/* 히어로 섹션 - 파란색 배경 */}
+      <section className="bg-gradient-to-br from-[#13588f] to-[#1e6cb0] text-white py-24 md:py-32">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="mb-6 flex justify-center">
-              <div className="relative h-10 w-10 sm:h-14 sm:w-14">
-        <Image
-                  src="/images/logo.png"
-                  alt="DEBUT 영어학원 로고"
-                  fill
-                  sizes="(max-width: 640px) 40px, 56px"
-          priority
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8 tracking-tight leading-tight">
-              <span className="relative">
-                <span className="highlight-box text-4xl md:text-6xl">같이 완성</span>
-              </span>, Let's Do It
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight">
+              같이 완성, <span className="text-yellow-300">Let's Do It</span> ✨
             </h1>
-            <p className="text-xl text-gray-700 mb-10 leading-relaxed">
-              DEBUT 영어학원은 학생, 학부모, 교사가 <span className="font-semibold text-[#13588f]">함께</span> 영어 능력을 완성해나가는 
-              효과적인 방식의 영어교육을 제공합니다. 개인별 맞춤 학습 루틴 설계부터 
-              AI 기반 학습 관리까지, 모든 과정을 <span className="font-semibold text-[#13588f]">함께</span> 합니다.
+            <p className="text-lg md:text-xl mb-10 leading-relaxed text-blue-100">
+              초등 1학년부터 중3까지, DEBUT에서 함께 영어 실력을 완성하세요.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Link 
-                href="/learning-process" 
-                className="btn-apple"
+                href="/classes" 
+                className="bg-red-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-red-700 transition-colors inline-flex items-center justify-center"
               >
-                학습과정 살펴보기
+                클래스 예약 <FiArrowRight className="ml-2" />
               </Link>
               <Link 
-                href="/classes" 
-                className="bg-white text-[#0071e3] border border-[#0071e3] px-6 py-3 rounded-full shadow-md font-semibold hover:bg-blue-50 transition-colors"
+                href="/about" 
+                className="bg-white text-[#13588f] border border-white px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-blue-50 transition-colors"
               >
-                클래스 알아보기
+                학원 소개 보기
               </Link>
             </div>
           </div>
