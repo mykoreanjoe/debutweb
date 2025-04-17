@@ -1,11 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiMapPin, FiPhone, FiMail, FiClock, FiInstagram, FiYoutube } from 'react-icons/fi';
+import { FiMapPin, FiPhone, FiMail, FiClock, FiInstagram, FiYoutube, FiMessageCircle, FiEdit } from 'react-icons/fi';
 
 const Footer = () => {
   const year = new Date().getFullYear();
   
+  const quickLinks = [
+    { name: '학습과정', href: '/learning-process' },
+    { name: '클래스', href: '/classes' },
+    { name: '학습관', href: '/inside' },
+    { name: '데뷰인', href: '/debutin' },
+    { name: '온라인AI', href: '/online-ai' },
+    { name: '학습매니저', href: '/study-manager' },
+  ];
+
+  const socialLinks = [
+    { name: '카카오톡', href: 'https://pf.kakao.com/_pGxkPn/chat', icon: FiMessageCircle },
+    { name: '블로그', href: 'https://blog.naver.com/ourdebut', icon: FiEdit },
+  ];
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">

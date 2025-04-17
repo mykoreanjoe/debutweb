@@ -23,6 +23,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navigation = [
+    { name: '학습과정', href: '/learning-process' },
+    { name: '클래스', href: '/classes' },
+    { name: '학습관', href: '/inside' },
+    { name: '데뷰인', href: '/debutin' },
+    { name: '온라인AI', href: '/online-ai' },
+    { name: '학습매니저', href: '/study-manager' },
+  ];
+
   return (
     <header className={`sticky top-0 z-40 bg-white transition-all duration-300 ${
       scrolled ? 'shadow-md py-2' : 'shadow-sm py-4'

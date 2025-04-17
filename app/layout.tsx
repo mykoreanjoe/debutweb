@@ -8,9 +8,24 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DEBUT 영어학원 - 개인별 맞춤형 영어 학습',
-  description: '건대입구역 영어학원 DEBUT에서 특화된 영어 교육과 개인별 맞춤형 학습 프로그램을 만나보세요. 초등부터 성인까지 다양한 영어 교육 커리큘럼을 제공합니다.',
-  keywords: '영어학원, 건대입구 영어학원, 초등영어, 중등영어, 고등영어, 토익, 영어회화, 영어 인강, 맞춤형 영어교육',
+  title: 'DEBUT - 초중등 영어 전문 교육',
+  description: '초등 1학년부터 중3까지, DEBUT에서 함께 영어 실력을 완성하세요. 체계적인 영어 교육과 맞춤형 학습 관리를 제공합니다.',
+  keywords: '초등영어, 중등영어, 영어학원, 영어교육, 영어과외, 영어학습, 영어공부, 영어과외, 영어회화, 영어문법, 영어독해, 영어작문, 영어시험, 영어시험대비, 영어내신, 영어수행평가, 영어학습관리, 영어학습코칭, 영어학습방법, 영어학습전략',
+  openGraph: {
+    title: 'DEBUT - 초중등 영어 전문 교육',
+    description: '초등 1학년부터 중3까지, DEBUT에서 함께 영어 실력을 완성하세요.',
+    url: 'https://debutweb.vercel.app',
+    siteName: 'DEBUT',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'ko_KR',
+    type: 'website',
+  },
 }
 
 export const viewport = {

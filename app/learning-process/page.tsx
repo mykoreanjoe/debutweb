@@ -1,11 +1,54 @@
 import Link from 'next/link';
-import { FiArrowRight, FiArrowLeft, FiExternalLink, FiBookmark, FiTarget, FiActivity, FiLayers, FiStar, FiCheckCircle } from 'react-icons/fi';
+import { FiArrowRight, FiArrowLeft, FiExternalLink, FiBookmark, FiTarget, FiActivity, FiLayers, FiStar, FiCheckCircle, FiSearch, FiTrendingUp, FiRepeat } from 'react-icons/fi';
 
 export const metadata = {
   title: 'DEBUT 학습과정 - 5단계 영어 학습 방법론',
   description: 'DEBUT 영어학원의 체계적인 5단계 영어 학습 과정 - Discover, Engage, Boost, Unfold, Train으로 완성되는 효과적인 영어 학습 방법론을 소개합니다.',
   keywords: '영어 학습과정, 영어 학습 방법론, 효과적인 영어 학습, 5단계 영어 학습, 영어 교육 커리큘럼, 영어 실력 향상',
 };
+
+const processes = [
+  {
+    title: 'DISCOVER, 발견하다!',
+    description: '학생의 현재 영어 실력과 학습 스타일을 정확하게 진단합니다.',
+    icon: FiSearch
+  },
+  {
+    title: 'ENGAGE, 참여하다!',
+    description: '개인별 맞춤 학습 계획을 수립하고 실행에 옮깁니다.',
+    icon: FiTarget
+  },
+  {
+    title: 'BOOST, 끌어 올리다!',
+    description: '체계적인 학습 관리와 피드백으로 실력 향상을 가속화합니다.',
+    icon: FiTrendingUp
+  },
+  {
+    title: 'UNFOLD, 드러내다!',
+    description: '학습 성과를 측정하고 성장의 증거를 확인합니다.',
+    icon: FiActivity
+  },
+  {
+    title: 'TRAIN, 훈련하다!',
+    description: '지속적인 연습과 복습으로 실력을 공고히 합니다.',
+    icon: FiRepeat
+  }
+];
+
+const visions = [
+  {
+    title: '공부 습관',
+    heading: '수학이 입시 영어가 취업을 좌우한다면, 습관은 인생을 결정 합니다.',
+    description: '좋은 학습 습관은 단순히 성적 향상을 넘어 평생의 자산이 됩니다. 데뷰는 학생들이 효과적인 학습 습관을 형성할 수 있도록 체계적인 가이드를 제공합니다.',
+    blogLink: 'https://blog.naver.com/ourdebut'
+  },
+  {
+    title: '학습 스킬',
+    heading: '영어는 머리가 아니라 시간이 결정 지으며, 열심히가 아니라 스킬이 성적을 가릅니다.',
+    description: '각 영역별 효과적인 학습 전략과 기술을 습득함으로써, 학생들은 더 효율적으로 영어 실력을 향상시킬 수 있습니다. 읽기, 듣기, 말하기, 쓰기 각 영역에 특화된 학습 스킬을 체계적으로 가르칩니다.',
+    blogLink: 'https://blog.naver.com/ourdebut'
+  }
+];
 
 export default function LearningProcess() {
   return (
