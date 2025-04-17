@@ -1,3 +1,4 @@
+import React from 'react'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from './components/Header'
@@ -5,7 +6,7 @@ import Footer from './components/Footer'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin', 'latin-ext'] })
 
 export const metadata: Metadata = {
   title: 'DEBUT - 초중등 영어 전문 교육',
@@ -42,6 +43,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
