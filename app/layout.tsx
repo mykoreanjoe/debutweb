@@ -1,12 +1,13 @@
 import React from 'react'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans_KR } from 'next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'] })
+const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' })
+const notoSansKr = Noto_Sans_KR({ subsets: ['latin'], weight: ['400', '500', '700'], variable: '--font-noto-sans-kr' })
 
 export const metadata: Metadata = {
   title: 'DEBUT - 초중등 영어 전문 교육',
@@ -67,7 +68,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${notoSansKr.variable} font-sans`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMVTFHQM"

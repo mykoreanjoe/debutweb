@@ -28,7 +28,7 @@ module.exports = {
         'apple-dark': '#1d1d1f',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-noto-sans-kr)', 'var(--font-inter)', 'Noto Sans KR', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       boxShadow: {
