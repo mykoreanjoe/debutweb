@@ -45,69 +45,30 @@ export default function StudyRoomPage() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        
-        // 캐시 방지를 위한 타임스탬프 추가
         const timestamp = new Date().getTime();
+        const response = await fetch(`/api/studyroom?search=${searchQuery}&t=${timestamp}`);
         
-        try {
-          const response = await fetch(`/api/studyroom?search=${searchQuery}&t=${timestamp}`);
-          
-          if (!response.ok) {
-            throw new Error(`API 응답 오류: (상태 코드: ${response.status})`);
-          }
-          
-          const data = await response.json();
-          setStudyData(data);
-        } catch (error) {
-          console.error('API 호출 실패, 정적 데이터 사용:', error);
-          // 정적 데이터 예시를 사용하여 폴백
-          setStudyData({
-            items: [
-              {
-                id: 1,
-                level: "초급",
-                concept: "기본 문장 구조",
-                title: "영어 문장의 기본 구조 이해하기",
-                videoId: "xki1IBFLPAw",
-                duration: "15분",
-                tags: ['문장구조', '기본문법', '주어동사']
-              },
-              {
-                id: 2,
-                level: "초급",
-                concept: "시제",
-                title: "현재시제 완벽 정복",
-                videoId: "tNEG0Wbc5eQ",
-                duration: "20분",
-                tags: ['시제', '현재시제', '기본문법']
-              },
-              {
-                id: 11,
-                level: "중급",
-                concept: "분사구문",
-                title: "분사구문 완벽 정리",
-                videoId: "168dKlRc7Hg",
-                duration: "24분",
-                tags: ['분사구문', '현재분사', '과거분사']
-              },
-              {
-                id: 21,
-                level: "고급",
-                concept: "도치",
-                title: "도치 완벽 정리",
-                videoId: "ehQ3uoS7YqE",
-                duration: "28분",
-                tags: ['도치', '강조', '고급문법']
-              }
-            ]
-          });
+        if (!response.ok) {
+          throw new Error(`API 응답 오류: (상태 코드: ${response.status})`);
         }
         
+        const data = await response.json();
+        setStudyData(data);
         setIsLoading(false);
       } catch (error) {
-        console.error('데이터 로딩 중 오류 발생:', error);
-        // 사용자에게 오류 메시지 표시
-        alert(`데이터를 불러오는 중 오류가 발생했습니다: ${error instanceof Error ? error.message : '알 수 없는 오류'}`);
+        setStudyData({
+          items: [
+            {
+              id: 1,
+              level: "초급",
+              concept: "기본 문장 구조",
+              title: "영어 문장의 기본 구조 이해하기",
+              videoId: "xki1IBFLPAw",
+              duration: "15분",
+              tags: ['문장구조', '기본문법', '주어동사']
+            }
+          ]
+        });
         setIsLoading(false);
       }
     };

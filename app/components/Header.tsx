@@ -9,13 +9,13 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: '소개', href: '/about' },
   { name: '학습과정', href: '/learning-process' },
-  { name: '데뷰클래스', href: '/classes' },
+  { name: '클래스', href: '/classes' },
   { name: '스터디매니저', href: '/study-manager' },
   { name: '온라인AI', href: '/online-ai' },
   { name: '스터디북', href: '/studybook' },
   { name: '데뷰인', href: '/debutin' },
   { name: 'FAQ', href: '/faq' },
-  { name: '데뷰인사이드', href: '/inside', isButton: true },
+  { name: '학습관', href: '/inside', isButton: true },
 ];
 
 export default function Header() {

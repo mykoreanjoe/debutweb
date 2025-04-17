@@ -6,14 +6,14 @@ export default function ElementaryRegular() {
   return (
     <div className="min-h-screen">
       {/* 히어로 섹션 */}
-      <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+      <section className="bg-gradient-to-br from-yellow-50 to-yellow-100 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link href="/classes" className="inline-flex items-center text-primary hover:underline mb-8">
+            <Link href="/classes" className="inline-flex items-center text-amber-600 hover:underline mb-8">
               <FiArrowLeft className="mr-2" /> 모든 클래스 보기
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              초등 정규 <span className="text-primary">프로그램</span>
+              초등 정규 <span className="text-amber-600">프로그램</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               기초부터 탄탄하게 쌓아올리는 영어 교육의 핵심, 초등학생을 위한 체계적인 영어 학습 프로그램입니다.
@@ -21,21 +21,21 @@ export default function ElementaryRegular() {
             
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="bg-white p-4 rounded-lg shadow-custom-soft flex items-center">
-                <FiUsers className="text-primary mr-3 h-6 w-6" />
+                <FiUsers className="text-amber-600 mr-3 h-6 w-6" />
                 <div>
                   <p className="text-sm text-gray-500">대상</p>
                   <p className="font-medium">초등학교 1~5학년</p>
                 </div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-custom-soft flex items-center">
-                <FiAward className="text-primary mr-3 h-6 w-6" />
+                <FiAward className="text-amber-600 mr-3 h-6 w-6" />
                 <div>
                   <p className="text-sm text-gray-500">레벨</p>
                   <p className="font-medium">G1 ~ G7</p>
                 </div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-custom-soft flex items-center">
-                <FiClock className="text-primary mr-3 h-6 w-6" />
+                <FiClock className="text-amber-600 mr-3 h-6 w-6" />
                 <div>
                   <p className="text-sm text-gray-500">기간</p>
                   <p className="font-medium">3개월 기본, 3개월 심화 과정</p>
@@ -152,21 +152,21 @@ export default function ElementaryRegular() {
               <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">초등 정규 시간표</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-lg font-bold text-primary mb-4 flex items-center">
+                  <h4 className="text-lg font-bold text-amber-600 mb-4 flex items-center">
                     <FiCalendar className="mr-2" /> 월수금 수업
                   </h4>
                   <div className="space-y-3">
-                    <div className="flex items-center p-3 bg-primary/5 rounded-md">
+                    <div className="flex items-center p-3 bg-amber-50 rounded-md">
                       <span className="font-medium w-24">1교시</span>
                       <span className="text-gray-700">2:30 ~ 4:05</span>
                       <span className="ml-auto text-sm text-gray-500">(95분)</span>
                     </div>
-                    <div className="flex items-center p-3 bg-primary/5 rounded-md">
+                    <div className="flex items-center p-3 bg-amber-50 rounded-md">
                       <span className="font-medium w-24">2교시</span>
                       <span className="text-gray-700">4:10 ~ 5:45</span>
                       <span className="ml-auto text-sm text-gray-500">(95분)</span>
                     </div>
-                    <div className="flex items-center p-3 bg-primary/5 rounded-md">
+                    <div className="flex items-center p-3 bg-amber-50 rounded-md">
                       <span className="font-medium w-24">3교시</span>
                       <span className="text-gray-700">6:00 ~ 7:35</span>
                       <span className="ml-auto text-sm text-gray-500">(95분)</span>
@@ -174,16 +174,16 @@ export default function ElementaryRegular() {
                   </div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-lg font-bold text-primary mb-4 flex items-center">
+                  <h4 className="text-lg font-bold text-amber-600 mb-4 flex items-center">
                     <FiCalendar className="mr-2" /> 화목 수업
                   </h4>
                   <div className="space-y-3">
-                    <div className="flex items-center p-3 bg-primary/5 rounded-md">
+                    <div className="flex items-center p-3 bg-amber-50 rounded-md">
                       <span className="font-medium w-24">1교시</span>
                       <span className="text-gray-700">3:30 ~ 5:55</span>
                       <span className="ml-auto text-sm text-gray-500">(145분)</span>
                     </div>
-                    <div className="flex items-center p-3 bg-primary/5 rounded-md">
+                    <div className="flex items-center p-3 bg-amber-50 rounded-md">
                       <span className="font-medium w-24">2교시</span>
                       <span className="text-gray-700">6:00 ~ 8:25</span>
                       <span className="ml-auto text-sm text-gray-500">(145분)</span>
@@ -197,10 +197,10 @@ export default function ElementaryRegular() {
       </section>
       
       {/* 상담 유도 섹션 */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-yellow-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-lg text-center">
+            <div className="p-8 rounded-lg text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">초등 정규 프로그램 상담받기</h3>
               <p className="text-gray-600 mb-6">
                 자녀의 영어 능력과 학습 스타일에 맞는 최적의 클래스를 추천해 드립니다.

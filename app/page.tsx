@@ -289,6 +289,21 @@ export default function Home() {
           </a>
         </div>
       </section>
+      
+      {/* 카카오톡 상담 */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a
+          href="https://pf.kakao.com/_pGxkPn/chat"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-yellow-400 hover:bg-yellow-500 text-black w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105"
+          aria-label="KakaoTalk 상담"
+        >
+          <svg width="28" height="28" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 36C70.562 36 24 72.713 24 118C24 147.67 43.383 173.433 71.563 186.27L66.601 219.371C66.253 221.403 67.545 223.403 69.577 223.751C70.686 223.917 71.795 223.585 72.61 222.892L112.99 193.163C117.892 193.72 122.901 194 128 194C185.438 194 232 157.287 232 118C232 72.713 185.438 36 128 36Z" fill="#000000"/>
+          </svg>
+        </a>
+      </div>
     </div>
   );
 }

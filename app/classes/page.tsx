@@ -11,23 +11,24 @@ export default function Classes() {
   return (
     <div className="min-h-screen">
       {/* 히어로 섹션 */}
-      <section className="bg-gradient-to-r from-primary-light/20 to-primary/30 py-24">
+      <section className="bg-gradient-to-r from-gray-50 to-gray-100 py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-8">
-            DEBUT <span className="text-primary">클래스</span>
+            맞춤형 <span className="text-gray-800">영어 교육 클래스</span>
           </h1>
           <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
-            학년과 수준에 맞춘 체계적인 커리큘럼으로 영어 학습의 깊이를 더하는 데뷰만의 특별한 클래스를 소개합니다.
+            DEBUT은 학생들의 연령과 능력에 따라 세 가지 주요 클래스를 제공합니다. 모든 클래스는 3개월 단위로 
+            구성되어 집중적이고 효과적인 학습을 보장합니다.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 mt-12">
-            <Link href="/classes/elementary-regular" className="px-8 py-4 bg-primary text-white rounded-full hover:bg-primary-light transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
+            <Link href="/classes/elementary-regular" className="px-8 py-4 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
               초등 정규
             </Link>
-            <Link href="/classes/elementary-intensive" className="px-8 py-4 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
+            <Link href="/classes/elementary-intensive" className="px-8 py-4 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
               초등 인텐시브
             </Link>
-            <Link href="/classes/middle-school" className="px-8 py-4 bg-secondary text-white rounded-full hover:bg-secondary/90 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
+            <Link href="/classes/middle-school" className="px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
               중등 정규
             </Link>
           </div>
@@ -47,24 +48,24 @@ export default function Classes() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* 초등 정규 */}
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary">
-              <div className="h-20 bg-primary flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-amber-500">
+              <div className="h-20 bg-amber-500 flex items-center justify-center">
                 <h3 className="text-2xl font-bold text-white">초등 정규</h3>
               </div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <span className="bg-primary-light text-primary text-sm font-semibold px-3 py-1 rounded-full">3개월 완성 프로그램</span>
+                  <span className="bg-amber-100 text-amber-700 text-sm font-semibold px-3 py-1 rounded-full">3개월 완성 프로그램</span>
                 </div>
                 <div className="space-y-5 mb-6">
                   <div className="flex items-start">
-                    <FiUsers className="text-primary mt-1 mr-3 flex-shrink-0 w-5 h-5" />
+                    <FiUsers className="text-amber-500 mt-1 mr-3 flex-shrink-0 w-5 h-5" />
                     <div>
                       <p className="font-semibold">레벨</p>
                       <p className="text-gray-600">DK ~ D3 (초등 3~6학년 수준)</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <FiCalendar className="text-primary mt-1 mr-3 flex-shrink-0 w-5 h-5" />
+                    <FiCalendar className="text-amber-500 mt-1 mr-3 flex-shrink-0 w-5 h-5" />
                     <div>
                       <p className="font-semibold">시간표</p>
                       <p className="text-gray-600">월수금: 2:30 / 4:10 / 6:00</p>
@@ -77,7 +78,7 @@ export default function Classes() {
                 </p>
                 <Link 
                   href="/classes/elementary-regular" 
-                  className="inline-flex items-center text-primary font-semibold hover:underline"
+                  className="inline-flex items-center text-amber-500 font-semibold hover:underline"
                 >
                   자세히 알아보기 <FiArrowRight className="ml-2" />
                 </Link>
@@ -85,24 +86,24 @@ export default function Classes() {
             </div>
             
             {/* 초등 인텐시브 */}
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-accent">
-              <div className="h-20 bg-accent flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-red-500">
+              <div className="h-20 bg-red-500 flex items-center justify-center">
                 <h3 className="text-2xl font-bold text-white">초등 인텐시브</h3>
               </div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <span className="bg-accent/10 text-accent text-sm font-semibold px-3 py-1 rounded-full">3개월 집중 훈련 루틴</span>
+                  <span className="bg-red-100 text-red-700 text-sm font-semibold px-3 py-1 rounded-full">3개월 집중 훈련 루틴</span>
                 </div>
                 <div className="space-y-5 mb-6">
                   <div className="flex items-start">
-                    <FiUsers className="text-accent mt-1 mr-3 flex-shrink-0 w-5 h-5" />
+                    <FiUsers className="text-red-500 mt-1 mr-3 flex-shrink-0 w-5 h-5" />
                     <div>
                       <p className="font-semibold">레벨</p>
                       <p className="text-gray-600">D3 ~ D5+ (초등 6학년, 빠른 학습자)</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <FiClock className="text-accent mt-1 mr-3 flex-shrink-0 w-5 h-5" />
+                    <FiClock className="text-red-500 mt-1 mr-3 flex-shrink-0 w-5 h-5" />
                     <div>
                       <p className="font-semibold">집중 분야</p>
                       <p className="text-gray-600">말하기·쓰기 중심 + 과학/역사 콘텐츠 병행</p>
@@ -114,7 +115,7 @@ export default function Classes() {
                 </p>
                 <Link 
                   href="/classes/elementary-intensive" 
-                  className="inline-flex items-center text-accent font-semibold hover:underline"
+                  className="inline-flex items-center text-red-500 font-semibold hover:underline"
                 >
                   자세히 알아보기 <FiArrowRight className="ml-2" />
                 </Link>
@@ -122,24 +123,24 @@ export default function Classes() {
             </div>
             
             {/* 중등 정규 */}
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-secondary">
-              <div className="h-20 bg-secondary flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-blue-600">
+              <div className="h-20 bg-blue-600 flex items-center justify-center">
                 <h3 className="text-2xl font-bold text-white">중등 정규</h3>
               </div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <span className="bg-secondary/10 text-secondary text-sm font-semibold px-3 py-1 rounded-full">3개월 단위 수업 + 평가 루틴</span>
+                  <span className="bg-blue-100 text-blue-700 text-sm font-semibold px-3 py-1 rounded-full">3개월 단위 수업 + 평가 루틴</span>
                 </div>
                 <div className="space-y-5 mb-6">
                   <div className="flex items-start">
-                    <FiUsers className="text-secondary mt-1 mr-3 flex-shrink-0 w-5 h-5" />
+                    <FiUsers className="text-blue-600 mt-1 mr-3 flex-shrink-0 w-5 h-5" />
                     <div>
                       <p className="font-semibold">레벨</p>
                       <p className="text-gray-600">INTER ~ MASTER (중1~중3)</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <FiCalendar className="text-secondary mt-1 mr-3 flex-shrink-0 w-5 h-5" />
+                    <FiCalendar className="text-blue-600 mt-1 mr-3 flex-shrink-0 w-5 h-5" />
                     <div>
                       <p className="font-semibold">시간표</p>
                       <p className="text-gray-600">화/금: 4:55 ~ 7:25 or 7:30 ~ 10:00</p>
@@ -152,7 +153,7 @@ export default function Classes() {
                 </p>
                 <Link 
                   href="/classes/middle-school" 
-                  className="inline-flex items-center text-secondary font-semibold hover:underline"
+                  className="inline-flex items-center text-blue-600 font-semibold hover:underline"
                 >
                   자세히 알아보기 <FiArrowRight className="ml-2" />
                 </Link>
@@ -163,40 +164,40 @@ export default function Classes() {
       </section>
       
       {/* 내신 프로그램 섹션 */}
-      <section className="py-20 bg-gradient-to-r from-secondary/10 to-secondary/20">
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">
-              어려운 시험에서도 빛나는 <span className="text-secondary">데뷰 내신</span>
+              어려운 시험에서도 빛나는 <span className="text-blue-600">데뷰 내신</span>
             </h2>
             
             {/* 대상 학교 정보 */}
-            <div className="bg-white p-6 rounded-xl shadow-lg mb-12 border-l-4 border-secondary">
+            <div className="bg-white p-6 rounded-xl shadow-lg mb-12 border-l-4 border-blue-600">
               <div className="flex items-center mb-4">
-                <FiMapPin className="text-secondary h-6 w-6 mr-3" />
+                <FiMapPin className="text-blue-600 h-6 w-6 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">내신 대상 학교</h3>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                <div className="bg-secondary/5 p-5 rounded-lg">
+                <div className="bg-blue-50 p-5 rounded-lg">
                   <div className="flex items-center mb-3">
-                    <FiFlag className="text-secondary mr-2" />
+                    <FiFlag className="text-blue-600 mr-2" />
                     <h4 className="font-bold text-lg">목일중학교</h4>
                   </div>
                   <p className="text-gray-600 text-sm">목일중학교 교과서 기반 내신 완벽 대비</p>
                 </div>
                 
-                <div className="bg-secondary/5 p-5 rounded-lg">
+                <div className="bg-blue-50 p-5 rounded-lg">
                   <div className="flex items-center mb-3">
-                    <FiFlag className="text-secondary mr-2" />
+                    <FiFlag className="text-blue-600 mr-2" />
                     <h4 className="font-bold text-lg">목동중학교</h4>
                   </div>
                   <p className="text-gray-600 text-sm">목동중학교 교과서 완벽 분석 및 내신 대비</p>
                 </div>
                 
-                <div className="bg-secondary/5 p-5 rounded-lg">
+                <div className="bg-blue-50 p-5 rounded-lg">
                   <div className="flex items-center mb-3">
-                    <FiFlag className="text-secondary mr-2" />
+                    <FiFlag className="text-blue-600 mr-2" />
                     <h4 className="font-bold text-lg">문래중학교</h4>
                   </div>
                   <p className="text-gray-600 text-sm">문래중학교 특성화된 내신 집중 프로그램</p>
@@ -206,7 +207,7 @@ export default function Classes() {
             
             {/* 내신 프로그램 과정 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-              <div className="bg-secondary py-4 px-6">
+              <div className="bg-blue-600 py-4 px-6">
                 <h3 className="text-2xl font-bold text-white">내신 프로그램 과정</h3>
               </div>
               <div className="p-6">
@@ -214,7 +215,7 @@ export default function Classes() {
                   <table className="w-full">
                     <tbody>
                       <tr className="border-b border-gray-200">
-                        <td className="py-4 px-4 bg-yellow-200 font-bold text-center w-1/6">
+                        <td className="py-4 px-4 bg-blue-100 font-bold text-center w-1/6">
                           내신<br/>준비
                         </td>
                         <td className="py-4 px-6">
@@ -223,7 +224,7 @@ export default function Classes() {
                         </td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-4 px-4 bg-yellow-200 font-bold text-center">
+                        <td className="py-4 px-4 bg-blue-100 font-bold text-center">
                           내신<br/>수업
                         </td>
                         <td className="py-4 px-6">
@@ -232,7 +233,7 @@ export default function Classes() {
                         </td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-4 px-4 bg-yellow-200 font-bold text-center">
+                        <td className="py-4 px-4 bg-blue-100 font-bold text-center">
                           학교<br/>프린트
                         </td>
                         <td className="py-4 px-6">
@@ -241,7 +242,7 @@ export default function Classes() {
                         </td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-4 px-4 bg-yellow-200 font-bold text-center">
+                        <td className="py-4 px-4 bg-blue-100 font-bold text-center">
                           내신<br/>수행
                         </td>
                         <td className="py-4 px-6">
@@ -252,7 +253,7 @@ export default function Classes() {
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 bg-yellow-200 font-bold text-center">
+                        <td className="py-4 px-4 bg-blue-100 font-bold text-center">
                           직전<br/>보강
                         </td>
                         <td className="py-4 px-6">
@@ -260,7 +261,7 @@ export default function Classes() {
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 bg-green-200 font-bold text-center">
+                        <td className="py-4 px-4 bg-green-100 font-bold text-center">
                           시험 후
                         </td>
                         <td className="py-4 px-6">
@@ -278,8 +279,8 @@ export default function Classes() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="flex items-start mb-6">
-                  <div className="bg-secondary/10 rounded-full p-3 mt-1 mr-4">
-                    <FiBook className="text-secondary h-6 w-6" />
+                  <div className="bg-blue-100 rounded-full p-3 mt-1 mr-4">
+                    <FiBook className="text-blue-600 h-6 w-6" />
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-4">교과서 핵심 내용 완벽 분석</h4>
@@ -288,11 +289,11 @@ export default function Classes() {
                 </div>
                 <ul className="ml-16 space-y-3">
                   <li className="flex items-start">
-                    <FiChevronRight className="text-secondary mr-2 flex-shrink-0 mt-1" />
+                    <FiChevronRight className="text-blue-600 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-600">교과서와 일치하는 학습 프린트 제작</span>
                   </li>
                   <li className="flex items-start">
-                    <FiChevronRight className="text-secondary mr-2 flex-shrink-0 mt-1" />
+                    <FiChevronRight className="text-blue-600 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-600">학교별 특성에 맞춘 맞춤형 내신 대비</span>
                   </li>
                 </ul>
@@ -300,8 +301,8 @@ export default function Classes() {
               
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="flex items-start mb-6">
-                  <div className="bg-secondary/10 rounded-full p-3 mt-1 mr-4">
-                    <FiFileText className="text-secondary h-6 w-6" />
+                  <div className="bg-blue-100 rounded-full p-3 mt-1 mr-4">
+                    <FiFileText className="text-blue-600 h-6 w-6" />
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-4">단계적 내신 완성 시스템</h4>
@@ -310,15 +311,15 @@ export default function Classes() {
                 </div>
                 <ul className="ml-16 space-y-3">
                   <li className="flex items-start">
-                    <FiChevronRight className="text-secondary mr-2 flex-shrink-0 mt-1" />
+                    <FiChevronRight className="text-blue-600 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-600">월평균 1,000~1,500 문제 풀이</span>
                   </li>
                   <li className="flex items-start">
-                    <FiChevronRight className="text-secondary mr-2 flex-shrink-0 mt-1" />
+                    <FiChevronRight className="text-blue-600 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-600">개별 오답을 파악 및 추가 피드백</span>
                   </li>
                   <li className="flex items-start">
-                    <FiChevronRight className="text-secondary mr-2 flex-shrink-0 mt-1" />
+                    <FiChevronRight className="text-blue-600 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-600">시험 후 철저한 분석과 향후 전략 수립</span>
                   </li>
                 </ul>
@@ -337,7 +338,7 @@ export default function Classes() {
             3개월 완성 프로그램으로 빠르고 효과적인 영어 실력 향상을 경험하세요.
           </p>
           <a 
-            href="https://open.kakao.com/o/s19K0tKg" 
+            href="https://pf.kakao.com/_pGxkPn/chat" 
             target="_blank"
             rel="noopener noreferrer" 
             className="inline-flex items-center bg-yellow-400 text-slate-900 px-8 py-4 rounded-full hover:bg-yellow-500 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"

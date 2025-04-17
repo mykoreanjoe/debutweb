@@ -7,12 +7,16 @@ const Footer = () => {
   const year = new Date().getFullYear();
   
   const quickLinks = [
+    { name: 'Home', href: '/' },
+    { name: '소개', href: '/about' },
     { name: '학습과정', href: '/learning-process' },
     { name: '클래스', href: '/classes' },
-    { name: '학습관', href: '/inside' },
-    { name: '데뷰인', href: '/debutin' },
+    { name: '스터디매니저', href: '/study-manager' },
     { name: '온라인AI', href: '/online-ai' },
-    { name: '학습매니저', href: '/study-manager' },
+    { name: '스터디북', href: '/studybook' },
+    { name: '데뷰인', href: '/debutin' },
+    { name: 'FAQ', href: '/faq' },
+    { name: '학습관', href: '/inside' },
   ];
 
   const socialLinks = [
@@ -43,22 +47,18 @@ const Footer = () => {
               효과적인 방식의 영어교육을 제공합니다.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://instagram.com/debut_edu" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <FiInstagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://youtube.com/@debut_edu" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <FiYoutube className="w-5 h-5" />
-              </a>
+              {socialLinks.map((link) => (
+                <a 
+                  key={link.name}
+                  href={link.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={link.name}
+                >
+                  <link.icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
           
@@ -66,56 +66,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-200">빠른 링크</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  DEBUT 소개
-                </Link>
-              </li>
-              <li>
-                <Link href="/learning-process" className="text-gray-400 hover:text-white transition-colors">
-                  DEBUT 학습 과정
-                </Link>
-              </li>
-              <li>
-                <Link href="/classes" className="text-gray-400 hover:text-white transition-colors">
-                  데뷰클래스
-                </Link>
-              </li>
-              <li>
-                <Link href="/study-manager" className="text-gray-400 hover:text-white transition-colors">
-                  스터디매니저
-                </Link>
-              </li>
-              <li>
-                <Link href="/online-ai" className="text-gray-400 hover:text-white transition-colors">
-                  온라인AI
-                </Link>
-              </li>
-              <li>
-                <Link href="/studybook" className="text-gray-400 hover:text-white transition-colors">
-                  스터디북
-                </Link>
-              </li>
-              <li>
-                <Link href="/debutin" className="text-gray-400 hover:text-white transition-colors">
-                  데뷰인
-                </Link>
-              </li>
-              <li>
-                <Link href="/inside" className="text-gray-400 hover:text-white transition-colors">
-                  데뷰인사이드
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
-                  FAQ
-                </Link>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <a 
                   href="https://booking.naver.com/booking/13/bizes/1068331/items/5609916"

@@ -63,6 +63,29 @@ export default function LearningProcess() {
             과정이 곧 완성으로 함께 가는 데뷰 영어 학습
           </p>
           
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-4xl mx-auto mb-10">
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold text-[#13588f] mb-2">DISCOVER</div>
+              <div className="text-lg font-medium text-gray-700">발견하다!</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold text-[#ff6b6b] mb-2">ENGAGE</div>
+              <div className="text-lg font-medium text-gray-700">참여하다!</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold text-[#37b24d] mb-2">BOOST</div>
+              <div className="text-lg font-medium text-gray-700">끌어 올리다!</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold text-[#f59f00] mb-2">UNFOLD</div>
+              <div className="text-lg font-medium text-gray-700">드러내다!</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold text-[#7950f2] mb-2">TRAIN</div>
+              <div className="text-lg font-medium text-gray-700">훈련하다!</div>
+            </div>
+          </div>
+          
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <a href="#discover" className="px-6 py-3 bg-[#13588f] text-white rounded-full hover:bg-[#0e4371] transition-colors transform hover:scale-105 duration-300 flex items-center shadow-md">
               <span className="text-2xl font-bold mr-1">D</span>ISCOVER
@@ -473,6 +496,96 @@ export default function LearningProcess() {
         </div>
       </section>
       
+      {/* 같이 완성하는 학습 비전 섹션 */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+              <span className="text-[#13588f]">같이 완성</span>하는 학습 비전
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              학생과 학부모, 선생님이 함께 만들어가는 효과적인 학습 패러다임
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* 비전 1: 공부 습관 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-500">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
+                  <div className="text-9xl text-[#13588f]/20 font-bold">
+                    HABIT
+                  </div>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white/80 backdrop-blur-sm px-8 py-6 rounded-lg w-5/6 text-center">
+                    <h3 className="text-xl font-bold text-[#13588f] mb-2">공부 습관</h3>
+                    <p className="text-gray-700 text-sm">
+                      성적을 넘어 평생의 자산이 되는 학습 습관
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-800 leading-tight">
+                  "수학이 입시 영어가 취업을 좌우한다면, 습관은 인생을 결정 합니다."
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  좋은 학습 습관은 단순히 성적 향상을 넘어 평생의 자산이 됩니다. 데뷰는 학생들이 효과적인 학습 습관을 형성할 수 있도록 체계적인 가이드를 제공합니다. 이는 초등학교부터 중학교까지의 중요한 성장 시기에 올바른 학습 습관을 형성하여 자기주도적 학습 능력을 키울 수 있도록 도와줍니다.
+                </p>
+                <div className="mt-6">
+                  <a 
+                    href="https://blog.naver.com/ourdebut" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-2 bg-[#13588f] text-white rounded-full hover:bg-[#0e4371] transition-colors"
+                  >
+                    <FiExternalLink className="mr-2" /> 습관 형성 사례 보기
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            {/* 비전 2: 학습 스킬 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-500">
+              <div className="relative h-64">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                  <div className="text-9xl text-[#37b24d]/20 font-bold">
+                    SKILL
+                  </div>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white/80 backdrop-blur-sm px-8 py-6 rounded-lg w-5/6 text-center">
+                    <h3 className="text-xl font-bold text-[#37b24d] mb-2">학습 스킬</h3>
+                    <p className="text-gray-700 text-sm">
+                      효율적으로 결과를 만들어내는 영어 학습법
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-800 leading-tight">
+                  "영어는 머리가 아니라 시간이 결정 지으며, 열심히가 아니라 스킬이 성적을 가릅니다."
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  각 영역별 효과적인 학습 전략과 기술을 습득함으로써, 학생들은 더 효율적으로 영어 실력을 향상시킬 수 있습니다. 읽기, 듣기, 말하기, 쓰기 각 영역에 특화된 학습 스킬을 체계적으로 가르칩니다. 단순히 많은 시간을 투자하는 것보다 효과적인 방법으로 학습하는 것이 중요합니다.
+                </p>
+                <div className="mt-6">
+                  <a 
+                    href="https://blog.naver.com/ourdebut" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-2 bg-[#37b24d] text-white rounded-full hover:bg-[#2b9e41] transition-colors"
+                  >
+                    <FiExternalLink className="mr-2" /> 영역별 학습 스킬 보기
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* CTA 섹션 */}
       <section className="py-20 bg-gradient-to-r from-[#13588f] via-[#1a6bab] to-[#2179c3] text-white">
         <div className="container mx-auto px-4 text-center">
@@ -518,7 +631,7 @@ export default function LearningProcess() {
       {/* 카카오톡 버튼 - 모든 페이지에 표시 */}
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="https://open.kakao.com/o/s19K0tKg"
+          href="https://pf.kakao.com/_pGxkPn/chat"
           target="_blank"
           rel="noopener noreferrer"
           className="block bg-yellow-400 hover:bg-yellow-500 text-black w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105"
