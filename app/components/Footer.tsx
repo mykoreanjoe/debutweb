@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FiMapPin, FiPhone, FiMail, FiClock, FiInstagram, FiYoutube, FiMessageCircle, FiEdit } from 'react-icons/fi';
 
 const Footer = () => {
@@ -31,16 +30,10 @@ const Footer = () => {
           {/* 로고 및 간략 소개 */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="relative h-7 w-7">
-                <Image
-                  src="/images/logo.png"
-                  alt="DEBUT 영어학원 로고"
-                  fill
-                  sizes="28px"
-                  className="object-contain"
-                />
+              <div className="h-7 w-7 flex items-center justify-center bg-white text-[#13588f] font-bold rounded-md">
+                D
               </div>
-              <h2 className="text-xl font-bold ml-2 text-[#13588f]">DEBUT</h2>
+              <h2 className="text-xl font-bold ml-2 text-white">DEBUT</h2>
             </div>
             <p className="text-gray-400 mb-6">
               학생, 학부모, 교사가 함께 영어 능력을 완성해나가는 
@@ -91,23 +84,23 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-200">연락처</h3>
             <div className="space-y-3">
               <div className="flex items-start">
-                <FiMapPin className="w-5 h-5 text-[#13588f] mr-3 mt-1" />
+                <FiMapPin className="w-5 h-5 text-white mr-3 mt-1" />
                 <span className="text-gray-400">서울특별시 양천구 신목로 38, 202호</span>
               </div>
               <div className="flex items-center">
-                <FiPhone className="w-5 h-5 text-[#13588f] mr-3" />
+                <FiPhone className="w-5 h-5 text-white mr-3" />
                 <a href="tel:02-6952-1131" className="text-gray-400 hover:text-white transition-colors">
                   02-6952-1131
                 </a>
               </div>
               <div className="flex items-center">
-                <FiMail className="w-5 h-5 text-[#13588f] mr-3" />
+                <FiMail className="w-5 h-5 text-white mr-3" />
                 <a href="mailto:debutedu@naver.com" className="text-gray-400 hover:text-white transition-colors">
                   debutedu@naver.com
                 </a>
               </div>
               <div className="flex items-start">
-                <FiClock className="w-5 h-5 text-[#13588f] mr-3 mt-1" />
+                <FiClock className="w-5 h-5 text-white mr-3 mt-1" />
                 <div className="text-gray-400">
                   <p>평일: 13:00-22:00</p>
                   <p>토요일: 11:00-16:00</p>
@@ -115,7 +108,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-[#13588f] font-bold mr-3 mt-1">등록번호</span>
+                <span className="text-white font-bold mr-3 mt-1">등록번호</span>
                 <span className="text-gray-400">6382호</span>
               </div>
             </div>

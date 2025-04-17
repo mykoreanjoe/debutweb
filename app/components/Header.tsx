@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const navLinks = [
@@ -41,15 +40,8 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* 로고 */}
           <Link href="/" className="flex items-center">
-            <div className="relative h-7 w-7 sm:h-8 sm:w-8">
-              <Image
-                src="/images/logo.png"
-                alt="DEBUT 영어학원 로고"
-                fill
-                sizes="(max-width: 640px) 28px, 32px"
-                priority
-                className="object-contain"
-              />
+            <div className="h-8 w-8 flex items-center justify-center bg-[#13588f] text-white font-bold rounded-md">
+              D
             </div>
             <span className="ml-2 text-lg sm:text-xl font-bold text-[#13588f]">DEBUT</span>
           </Link>
